@@ -1,0 +1,29 @@
+:root {
+    --white: #fff;
+    --light-violet: #D4D2E1;
+    --dark-violet: #7A6F8A;
+    --very-dark-violet: #0E0523;
+    --active-input-border: linear-gradient(#3F0EAA, #1E0633);
+    --input-errors: #FF0000;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ddd;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    max-width: 1440px;
+}
+
+.attribution {
+     font-size: 11px; text-align: center; 
+}
+    
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
