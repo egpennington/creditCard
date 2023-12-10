@@ -140,7 +140,8 @@ label {
     width: 800px;
     padding: 15px 30px;
     height: 100vh;
-    margin: 0 auto;
+    margin: 0;
+    margin-left: 100px;
     background: var(--white);
     color: var(--dark-violet);
     text-align: left;
@@ -188,6 +189,7 @@ label {
 .rightside-bottom input {
     width: 80px;
     appearance: none;
+    border: 1px solid #ddd;
 }
 
 .rightside-left-bottom-input {
@@ -226,6 +228,13 @@ label {
     display: none;
 }
 
+.message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
 
 /* footer */
 footer {

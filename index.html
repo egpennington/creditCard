@@ -18,12 +18,12 @@
     <!-- <div class="mobile"></div> -->
     <div class="leftside">
       <div class="card">
-        <img src="/images/bg-card-front.png" class="cardface card-front" alt="credit card front">
-        <img src="/images/bg-card-back.png" class="cardface card-back" alt="credit card back">
+        <img src="images/bg-card-front.png" class="cardface card-front" alt="credit card front">
+        <img src="images/bg-card-back.png" class="cardface card-back" alt="credit card back">
       </div>
-      <div class="logo"><img src="/images/card-logo.svg" alt="card logo for front of card"></div>
+      <div class="logo"><img src="images/card-logo.svg" alt="card logo for front of card"></div>
       <div class="title"><h1>Bailey's Bank</h1></div>
-      <img src="/images/bulldogLogo.png" alt="english bulldog shadow image logo" class="title-logo">
+      <img src="images/bulldogLogo.png" alt="english bulldog shadow image logo" class="title-logo">
       
       <div class="card-num" id="card-num-output-el">0000  0000  0000  0000</div>
       <div class="card-holder" id="card-holder-output-el">Jane Appleseed</div>
@@ -31,7 +31,7 @@
     
       <span class="back-info" id="cvc-output-el">000</span>
     </div>
-    <img src="/images/bulldogLogo.png" alt="english bulldog shadow image logo" class="backside-logo">
+    <img src="images/bulldogLogo.png" alt="english bulldog shadow image logo" class="backside-logo">
   
     <div class="rightside">
       <form action="#" class="form">  
@@ -45,9 +45,13 @@
           <div class="rightside-left">
             <label for="date">Exp. Date (MM/YY)</label>
               <div class="rightside-left-input">
-                <input type="text" inputmode="numeric" id="month-input-el" placeholder="MM" minlength="2" maxlength="2" required>
+                <input type="text" inputmode="numeric" pattern="[0-9]*" id="month-input-el" placeholder="MM" min="1" max="12" minlength="2" maxlength="2" required>
+                <input type="text" inputmode="numeric" pattern="[0-9]*" id="year-input-el" placeholder="YY" min="24" minlength="2" maxlength="2" required>
+
+
+                <!-- <input type="text" inputmode="numeric" id="month-input-el" placeholder="MM" min="1" max="12" minlength="2" maxlength="2" required>
                 
-                <input type="text" inputmode="numeric" id="year-input-el" placeholder="YY" minlength="2" maxlength="2" required>
+                <input type="text" inputmode="numeric" id="year-input-el" placeholder="YY" min="24" minlength="2" maxlength="2" required> -->
               </div>            
           </div>
 
@@ -60,17 +64,8 @@
         <p id="message-error" class="error"></p>
         <button type="submit" id="submit-btn" class="btn">Confirm</button>
         <p id="message-el" class="message mr-top-30"></p>
-      </form> 
-      
-    </div>
-    
-  </div>  
-  
-  <!-- Completed state start -->
-  <div class="submit-msg" id="submit-msg">
-    Thank you!
-    We've added your card details
-    Continue
+      </form>      
+    </div>    
   </div>
 
   <footer>

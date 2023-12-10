@@ -8,18 +8,9 @@ const yearInput = document.getElementById("year-input-el")
 const yearOutput = document.getElementById("year-output-el")
 const cvcInput = document.getElementById("cvc-input-el")
 const cvcOutput = document.getElementById("cvc-output-el")
-const messageError = document.getElementById("message-error")
-
- 
+const messageError = document.getElementById("message-error") 
 const submitBtn = document.getElementById("submit-btn")
 const messageEl = document.getElementById("message-el")
-
-submitBtn.addEventListener("click", ()=> {    
-    messageEl.innerHTML = `
-        Thank you ${cardHolderInput.value}, your information has been entered.
-        `
-        // clearInputFields()
-})
 
 // number input
 cardNumInput.addEventListener('input', updateCardNum)
@@ -28,12 +19,14 @@ function updateCardNum() {
     let cardNumValue = cardNumInput.value
 
     // Remove non-numeric characters and restrict length
+    // copy and pasted this, need to learn more about his code snipet
     const numericCardNum = cardNumValue.replace(/\D/g, '')
     cardNumValue = numericCardNum.slice(0, 16)
     cardNumOutput.textContent = formatCardNumber(cardNumValue)
   }
 
   // Format the numeric card number with spaces every four characters
+  // copy and pasted this, need to learn more about his code snipet
   function formatCardNumber(cardNum) {    
     return cardNum.replace(/(\d{4})(?=\d)/g, '$1 ')
   }
@@ -67,14 +60,6 @@ function clearInputFields() {
     cvcInput.valule = ""
 }
 
-// submitBtn.addEventListener("click", ()=> { 
-       
-//     messageEl.innerHTML = `
-//         Thank you ${cardHolderInput.value}, your information has been entered.
-//         `
-//         clearInputFields()
-// })
-
 submitBtn.addEventListener("click", () => {
     if (
         cardHolderInput.value.trim() !== "" &&
@@ -83,19 +68,21 @@ submitBtn.addEventListener("click", () => {
         yearInput.value.trim() !== "" &&
         cvcInput.value.trim() !== ""
     ) {
-        messageEl.innerHTML = `Thank you ${cardHolderInput.value}, your information has been entered.`;
-        clearInputFields();
+        messageEl.innerHTML = `
+                <img src="images/icon-complete.svg" alt="check mark for completed input">
+                Thank you ${cardHolderInput.value}, your information has been entered.
+                `
+
+        clearInputFields()
     } else {
         // Clear the message if any field is empty
         messageEl.innerHTML = "";
         // Display an error message or take any appropriate action
         messageError.textContent = "Please fill out all fields before submitting."
         setTimeout(() => {
-            messageError.textContent = "";
+            messageError.textContent = ""
         }, 2000)
                 
         // alert("Please fill out all fields before submitting.")
     }
 })
-
-
