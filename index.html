@@ -15,7 +15,7 @@
 </head>
 <body>
   <div class="container">
-    <!-- <div class="mobile"></div> -->
+    <div class="mobile"></div>
     <div class="leftside">
       <div class="card">
         <img src="images/bg-card-front.png" class="cardface card-front" alt="credit card front">
@@ -35,7 +35,7 @@
   
     <div class="rightside">
       <form action="#" class="form">  
-        <label for="name">Cardholder Name</label>
+        <label for="name" class="name">Cardholder Name</label>
         <input type="text" class="mr-bot-20" id="card-holder-input-el" placeholder="e.g. Jane Appleseed" required>
     
         <label for="number">Card Number</label>
@@ -47,11 +47,6 @@
               <div class="rightside-left-input">
                 <input type="text" inputmode="numeric" pattern="[0-9]*" id="month-input-el" placeholder="MM" min="1" max="12" minlength="2" maxlength="2" required>
                 <input type="text" inputmode="numeric" pattern="[0-9]*" id="year-input-el" placeholder="YY" min="24" minlength="2" maxlength="2" required>
-
-
-                <!-- <input type="text" inputmode="numeric" id="month-input-el" placeholder="MM" min="1" max="12" minlength="2" maxlength="2" required>
-                
-                <input type="text" inputmode="numeric" id="year-input-el" placeholder="YY" min="24" minlength="2" maxlength="2" required> -->
               </div>            
           </div>
 
