@@ -34,7 +34,7 @@ form.addEventListener("submit", (e) => {
     e.preventDefault()
     if (
         cardHolderInput.value.trim() !== "" &&
-        cardNumInput.value.length == 16 &&
+        cardNumInput.value.length === 16 &&
         monthInput.value.trim() !== "" &&
         yearInput.value.trim() !== "" &&
         cvcInput.value.trim() !== ""
