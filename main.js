@@ -35,7 +35,7 @@ form.addEventListener("submit", (e) => {
     const cardNumValue = cardNumInput.value.replace(/\D/g, '')
     if (
         cardHolderInput.value.trim() !== "" &&
-        cardNumValuelength === 16 &&
+        cardNumValue.length === 16 &&
         monthInput.value.trim() !== "" &&
         yearInput.value.trim() !== "" &&
         cvcInput.value.trim() !== ""
