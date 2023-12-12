@@ -34,25 +34,25 @@
     <img src="images/bulldogLogo.png" alt="english bulldog shadow image logo" class="backside-logo">
   
     <div class="rightside">
-      <form action="#" class="form">  
+      <form action="#" class="form" id="form-el">  
         <label for="name" class="name">Cardholder Name</label>
         <input type="text" class="mr-bot-20" id="card-holder-input-el" placeholder="e.g. Jane Appleseed" required>
     
         <label for="number">Card Number</label>
-        <input type="text" inputmode="numeric" class="mr-bot-20" id="card-num-input-el" placeholder="e.g. 1234 5678 9123 0000" minlength="16" maxlength="16" required>
+        <input type="number" inputmode="numeric" class="mr-bot-20" id="card-num-input-el" placeholder="e.g. 1234 5678 9123 0000"  required>
 
         <div class="rightside-bottom mr-bot-30">
           <div class="rightside-left">
             <label for="date">Exp. Date (MM/YY)</label>
               <div class="rightside-left-input">
-                <input type="text" inputmode="numeric" pattern="[0-9]*" id="month-input-el" placeholder="MM" min="1" max="12" minlength="2" maxlength="2" required>
-                <input type="text" inputmode="numeric" pattern="[0-9]*" id="year-input-el" placeholder="YY" min="24" minlength="2" maxlength="2" required>
+                <input type="number" inputmode="numeric" pattern="[0-9]*" id="month-input-el" placeholder="MM" min="1" max="12" required>
+                <input type="number" inputmode="numeric" pattern="[0-9]*" id="year-input-el" placeholder="YY" min="24" required>
               </div>            
           </div>
 
           <div class="rightside-right">
             <label for="ccv">CVC</label>
-            <input type="text" inputmode="numeric" id="cvc-input-el" placeholder="e.g. 123" minlength="3" maxlength="3" required>
+            <input type="number" inputmode="numeric" id="cvc-input-el" placeholder="e.g. 123" required>
           </div>
 
         </div>
