@@ -32,9 +32,10 @@ cvcInput.addEventListener("input", function() {
 
 form.addEventListener("submit", (e) => {
     e.preventDefault()
+    const cardNumValue = cardNumInput.value.replace(/\D/g, '')
     if (
         cardHolderInput.value.trim() !== "" &&
-        cardNumInput.value.length === 16 &&
+        cardNumValuelength === 16 &&
         monthInput.value.trim() !== "" &&
         yearInput.value.trim() !== "" &&
         cvcInput.value.trim() !== ""
