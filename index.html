@@ -15,23 +15,32 @@
 </head>
 <body>
   <div class="container">
-    <div class="mobile"></div>
     <div class="leftside">
-      <div class="card">
-        <img src="images/bg-card-front.png" class="cardface card-front" alt="credit card front">
-        <img src="images/bg-card-back.png" class="cardface card-back" alt="credit card back">
+      <div class="cards-container">
+        <div class="card-front">
+          <div class="card-front-top">
+            <img src="images/card-logo.svg" alt="card logo for front of card" class="logo">
+            <h1 class="title">Bailey's Bank</h1>  
+          </div>
+          <div class="card-front-middle">
+            <div class="card-num" id="card-num-output-el">0000  0000  0000 0000<div>
+              <img src="images/bulldogLogo.png" alt="english bulldog shadow image logo" class="title-logo">
+          </div>
+          <div class="card-front-bottom">
+            <div class="card-holder" id="card-holder-output-el">Jane Appleseed</div>
+            <div class="card-expire"><span id="month-output-el">00</span>/<span id="year-output-el">00</span></div>
+          </div>
+        </div>
+
+        <div class="card-back">
+          <!-- <img src="images/bg-card-back.png" alt="back of credit card with cvc"> -->
+          <img src="images/bulldogLogo.png" alt="english bulldog shadow image logo" class="backside-logo">
+          <span class="back-info" id="cvc-output-el">000</span>
+        </div>
       </div>
-      <div class="logo"><img src="images/card-logo.svg" alt="card logo for front of card"></div>
-      <div class="title"><h1>Bailey's Bank</h1></div>
-      <img src="images/bulldogLogo.png" alt="english bulldog shadow image logo" class="title-logo">
+    </div>      
       
-      <div class="card-num" id="card-num-output-el">0000  0000  0000  0000</div>
-      <div class="card-holder" id="card-holder-output-el">Jane Appleseed</div>
-      <div class="card-expire"><span id="month-output-el">00</span>/<span id="year-output-el">00</span></div>  
-    
-      <span class="back-info" id="cvc-output-el">000</span>
-    </div>
-    <img src="images/bulldogLogo.png" alt="english bulldog shadow image logo" class="backside-logo">
+    <!-- <div class="mobile"></div> -->    
   
     <div class="rightside">
       <form action="#" class="form" id="form-el">  
@@ -60,7 +69,7 @@
         <button type="submit" id="submit-btn" class="btn">Confirm</button>
         <p id="message-el" class="message mr-top-30"></p>
       </form>      
-    </div>    
+    </div>   
   </div>
 
   <footer>
