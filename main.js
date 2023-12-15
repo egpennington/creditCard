@@ -11,13 +11,35 @@ const cvcOutput = document.getElementById("cvc-output-el")
 const messageError = document.getElementById("message-error") 
 const submitBtn = document.getElementById("submit-btn")
 const messageEl = document.getElementById("message-el")
-const form = document.getElementById("form-el")
 
-// event listeners
+// number input
 cardNumInput.addEventListener('input', updateCardNum)
 
+function updateCardNum() {
+    let cardNumValue = cardNumInput.value
+
+    // Remove non-numeric characters and restrict length
+    // copy and pasted this, need to learn more about his code snipet
+    const numericCardNum = cardNumValue.replace(/\D/g, '')
+    cardNumValue = numericCardNum.slice(0, 16)
+    cardNumOutput.textContent = formatCardNumber(cardNumValue)
+  }
+
+  // Format the numeric card number with spaces every four characters
+  // copy and pasted this, need to learn more about his code snipet
+  function formatCardNumber(cardNum) {    
+    return cardNum.replace(/(\d{4})(?=\d)/g, '$1 ')
+  }
+
+// Name input
 cardHolderInput.addEventListener("input", updateCardHolder)
 
+function updateCardHolder() {
+    const cardHolderValue = cardHolderInput.value
+    cardHolderOutput.textContent = cardHolderValue
+}
+
+// month and year input
 monthInput.addEventListener("input", function() {
     monthOutput.textContent = monthInput.value
 })
@@ -30,12 +52,18 @@ cvcInput.addEventListener("input", function() {
     cvcOutput.textContent = cvcInput.value
 })
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault()
-    const cardNumValue = cardNumInput.value.replace(/\D/g, '')
+function clearInputFields() {
+    cardHolderInput.value = ""
+    cardNumInput.value = ""
+    monthInput.value = ""
+    yearInput.value = ""
+    cvcInput.valule = ""
+}
+
+submitBtn.addEventListener("click", () => {
     if (
         cardHolderInput.value.trim() !== "" &&
-        cardNumValue.length === 16 &&
+        cardNumInput.value.trim() !== "" &&
         monthInput.value.trim() !== "" &&
         yearInput.value.trim() !== "" &&
         cvcInput.value.trim() !== ""
@@ -58,33 +86,3 @@ form.addEventListener("submit", (e) => {
         // alert("Please fill out all fields before submitting.")
     }
 })
-
-// functions
-function updateCardNum() {
-    const cardNumValue = cardNumInput.value
-
-// Remove non-numeric characters and restrict length
-// copy and pasted this, need to learn more about his code snipet
-    const numericCardNum = cardNumValue.replace(/\D/g, '')
-    processedCardNumValue = numericCardNum.slice(0, 16)
-    cardNumOutput.textContent = formatCardNumber(processedCardNumValue)
-}
-
-// Format the numeric card number with spaces every four characters
-// copy and pasted this, need to learn more about his code snipet
-function formatCardNumber(cardNum) {    
-    return cardNum.replace(/(\d{4})(?=\d)/g, '$1 ')
-}
-
-function updateCardHolder() {
-    const cardHolderValue = cardHolderInput.value
-    cardHolderOutput.textContent = cardHolderValue
-}
-
-function clearInputFields() {
-    cardHolderInput.value = ""
-    cardNumInput.value = ""
-    monthInput.value = ""
-    yearInput.value = ""
-    cvcInput.valule = ""
-}
