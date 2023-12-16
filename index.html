@@ -17,36 +17,45 @@
   <div class="container">
     <div class="mobile"></div>
     <div class="leftside">
-      <div class="card">
-        <img src="images/bg-card-front.png" class="cardface card-front" alt="credit card front">
-        <img src="images/bg-card-back.png" class="cardface card-back" alt="credit card back">
-      </div>
-      <div class="logo"><img src="images/card-logo.svg" alt="card logo for front of card"></div>
-      <div class="title"><h1>Bailey's Bank</h1></div>
-      <img src="images/bulldogLogo.png" alt="english bulldog shadow image logo" class="title-logo">
+      <div class="cards-container">
+        <div class="card-front">
+          <img src="images/bg-card-front.png" class="cardface card-front" alt="credit card front">
+
+          <div class="title-front">
+            <img src="images/card-logo.svg" alt="card logo for front of card">
+            <div class="title"><h1>Bailey's Bank</h1></div>
+          </div>
+          
+          <img src="images/bulldogLogo.png" alt="english bulldog shadow image logo" class="title-dog-logo">
       
-      <div class="card-num" id="card-num-output-el">0000  0000  0000  0000</div>
-      <div class="card-holder" id="card-holder-output-el">Jane Appleseed</div>
-      <div class="card-expire"><span id="month-output-el">00</span>/<span id="year-output-el">00</span></div>  
-    
-      <span class="back-info" id="cvc-output-el">000</span>
-    </div>
-    <img src="images/bulldogLogo.png" alt="english bulldog shadow image logo" class="backside-logo">
+          <div class="card-num" id="card-num-output-el">0000  0000  0000  0000</div>
+          <div class="front-bottom">
+            <div class="card-holder" id="card-holder-output-el">Jane Appleseed</div>
+            <div class="card-expire"><span id="month-output-el">00</span>/<span id="year-output-el">00</span></div>
+          </div>          
+        </div>
+
+        <div class="card-back">
+          <img src="images/bg-card-back.png" class="cardface card-back" alt="credit card back">
+          <span class="back-num" id="cvc-output-el">000</span>
+          <img src="images/bulldogLogo.png" alt="english bulldog shadow image logo" class="backside-dog-logo">
+        </div>
+      </div>
   
     <div class="rightside">
-      <form action="#" class="form">  
+      <form action="#" class="form" id="form">  
         <label for="name" class="name">Cardholder Name</label>
         <input type="text" class="mr-bot-20" id="card-holder-input-el" placeholder="e.g. Jane Appleseed" required>
     
         <label for="number">Card Number</label>
-        <input type="text" inputmode="numeric" class="mr-bot-20" id="card-num-input-el" placeholder="e.g. 1234 5678 9123 0000" minlength="16" maxlength="16" required>
+        <input type="number" inputmode="numeric" class="mr-bot-20" id="card-num-input-el" placeholder="e.g. 1234 5678 9123 0000" required>
 
         <div class="rightside-bottom mr-bot-30">
           <div class="rightside-left">
             <label for="date">Exp. Date (MM/YY)</label>
               <div class="rightside-left-input">
-                <input type="text" inputmode="numeric" pattern="[0-9]*" id="month-input-el" placeholder="MM" min="1" max="12" minlength="2" maxlength="2" required>
-                <input type="text" inputmode="numeric" pattern="[0-9]*" id="year-input-el" placeholder="YY" min="24" minlength="2" maxlength="2" required>
+                <input type="number" inputmode="numeric" pattern="[0-9]*" id="month-input-el" placeholder="MM" min="1" max="12" required>
+                <input type="number" inputmode="numeric" pattern="[0-9]*" id="year-input-el" placeholder="YY" min="24" required>
               </div>            
           </div>
 
