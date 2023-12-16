@@ -51,13 +51,13 @@ label {
 .card-front {
     position: absolute;
     top: 70px;
-    left: 20px;
+    left: 5px;
 }
 
 .title-front {
     position: absolute;
     top: 90px;
-    left: 30px;
+    left: 10px;
     font-size: 0.9rem;
     width: 430px;
     display: flex;
@@ -69,20 +69,20 @@ label {
 .logo {
     position: absolute;
     top:200px;
-    left: 80px;
+    left: 50px;
 }
 
 .title-dog-logo {
     width: 80px;
     position: absolute;
-    left: 210px;
+    left: 190px;
     top: 170px;
 }
 
 .card-num {
     position: absolute;
     top: 210px;
-    left: 80px;
+    left: 60px;
     width: 330px;
     text-align: center;
     font-size: 1.8rem;
@@ -95,7 +95,7 @@ label {
     align-items: center;
     position: absolute;
     top: 280px;
-    left: 80px;
+    left: 60px;
     font-size: 0.9rem;
     text-shadow: 1px 1px 2px #333;
 }
@@ -103,7 +103,7 @@ label {
 .card-back {
     position: absolute;
     top: 200px;
-    left: 50px;
+    left: 30px;
 }
 
 .back-num {
@@ -242,7 +242,7 @@ footer {
         width: 100vw;
     }
     .card-back {
-        top: 3px;
+        top: 1px;
         z-index: 1;
     }
 
@@ -265,6 +265,8 @@ footer {
     }
 
     .rightside {
-        margin-top: 150px;
+        position: absolute;
+        top: 200px;
+        left: -260px;
     }
 }
